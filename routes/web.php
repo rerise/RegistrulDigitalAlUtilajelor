@@ -24,3 +24,7 @@ Route::resource('machines', 'MachinesController');
 // Route::get('/machines/create', ['uses' => 'MachinesController@create', 'as' => 'machines.create']);
 
 // Route::get('/machines/store', ['uses' => 'MachinesController@store', 'as' => 'machines.store']);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
