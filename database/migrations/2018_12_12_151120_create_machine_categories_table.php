@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOperatorsTable extends Migration
+class CreateMachineCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class CreateOperatorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('operators', function (Blueprint $table) {
+        Schema::create('machine_categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('preparation_details')->nullable();
-            $table->unsignedInteger('preparation_level_id')->nullable();
-            $table->string('contact')->nullable();
-               
+            $table->string('description')->nullable();
             $table->timestamps();
-            $table->foreign('preparation_level_id')->references('id')->on('preparation_levels');
+
+            
         });
     }
 
@@ -32,6 +30,6 @@ class CreateOperatorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('operators');
+        Schema::dropIfExists('machine_categories');
     }
 }

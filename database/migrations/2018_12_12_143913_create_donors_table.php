@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrganizationsTable extends Migration
+class CreateDonorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,17 @@ class CreateOrganizationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('organizations', function (Blueprint $table) {
+        Schema::create('donors', function (Blueprint $table) {
             $table->increments('id');
             $table->string("name");
-            $table->string("trade_register");
+            $table->enum('type', ['once', 'recurrent']);    
+            $table->string("mail")->nullable();
+            $table->string("contact")->nullable();
+            $table->unsignedInteger('organization_id')->nullable();
             $table->timestamps();
+
+            $table->foreign('organization_id')->references('id')->on('organizations');
+
         });
     }
 
@@ -28,6 +34,6 @@ class CreateOrganizationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('organizations');
+        Schema::dropIfExists('donors');
     }
 }
