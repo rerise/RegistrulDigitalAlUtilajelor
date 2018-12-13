@@ -39,13 +39,13 @@
 
         <div class="content container">
             <div class="title m-b-md">
-                Registru utilaje - adaugă utilaj
+                Operatori - adaugă 
             </div>
 
 
 
             <div>
-             <form method="post" action="{{ route('machines.store') }}">
+             <form method="post" action="{{ route('operators.store') }}">
               @csrf
               <div class="form-group">
                   <label for="name">Nume</label>
@@ -56,22 +56,22 @@
                       <input type="text" class="form-control" name="operator_id"/>
                   </div> -->
                   <div class="form-group">
-                      <label for="location_details">Locaţie:</label>
-                      <input type="text" class="form-control" name="location_details"/>
+                      <label for="preparation_details">Detalii nivel de pregatire</label>
+                      <input type="text" class="form-control" name="preparation_details"/>
                   </div>
                   <div class="form-group">
-                      <label for="level_equipment">Nivel echipament:</label>
-                      <input type="text" class="form-control" name="level_equipment"/>
+                      <label for="preparation_level_id">Nivel de pregatire</label>
+                      <input type="text" class="form-control" name="preparation_level_id"/>
                   </div>
                   <div class="form-group">
-                      <label for="type">Tip:</label>
-                      <input type="text" class="form-control" name="type"/>
+                      <label for="contact">Contact</label>
+                      <input type="text" class="form-control" name="contact"/>
                   </div>
                   
                   <button type="submit" class="btn btn-primary">Add</button>
                   <br>
-                  <a href="{{route('machines.index')}}">
-                    Înapoi la Lista utilaje
+                  <a href="{{route('operators.index')}}">
+                    Inapoi la Lista operatori
                 </a>
             </form>
         </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Deposit;
 
 class DepositsController extends Controller
 {
@@ -14,6 +15,8 @@ class DepositsController extends Controller
     public function index()
     {
         //
+        $deposits = Deposit::all();
+        return view('deposits.list', compact('deposits'));
     }
 
     /**
@@ -24,6 +27,7 @@ class DepositsController extends Controller
     public function create()
     {
         //
+        return view('deposits.create');
     }
 
     /**
@@ -35,6 +39,13 @@ class DepositsController extends Controller
     public function store(Request $request)
     {
         //
+         // TODO add validation + Request file
+        $request->validate([
+            'name'=>'required',
+        ]);
+        $deposit = new Deposit($request->except(["_method", "_token"]));
+        $deposit->save();
+        return redirect('/deposits')->with('success', 'Deposit has been added');
     }
 
     /**

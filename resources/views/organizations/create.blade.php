@@ -39,15 +39,16 @@
 
         <div class="content container">
             <div class="title m-b-md">
-                Registru utilaje - adaugă utilaj
+                Organizaţii - adaugă 
             </div>
 
 
 
             <div>
-             <form method="post" action="{{ route('machines.store') }}">
+             <form method="post" action="{{ route('organizations.store') }}">
               @csrf
               <div class="form-group">
+                  
                   <label for="name">Nume</label>
                   <input type="text" class="form-control" name="name"/>
               </div>
@@ -56,22 +57,14 @@
                       <input type="text" class="form-control" name="operator_id"/>
                   </div> -->
                   <div class="form-group">
-                      <label for="location_details">Locaţie:</label>
-                      <input type="text" class="form-control" name="location_details"/>
-                  </div>
-                  <div class="form-group">
-                      <label for="level_equipment">Nivel echipament:</label>
-                      <input type="text" class="form-control" name="level_equipment"/>
-                  </div>
-                  <div class="form-group">
-                      <label for="type">Tip:</label>
-                      <input type="text" class="form-control" name="type"/>
+                      <label for="details">Detalii:</label>
+                      <textarea name="details" class="form-control"></textarea>
                   </div>
                   
                   <button type="submit" class="btn btn-primary">Add</button>
                   <br>
-                  <a href="{{route('machines.index')}}">
-                    Înapoi la Lista utilaje
+                  <a href="{{route('organizations.index')}}">
+                    Inapoi la Lista organizaţii
                 </a>
             </form>
         </div>

@@ -36,7 +36,7 @@
 
             <div class="content container">
                 <div class="title">
-                    Registru utilaje
+                    Operatori
                 </div>
 
                 <div>
@@ -47,30 +47,30 @@
                                     Nume
                                 </th>
                                 <th>
-                                    Detalii locaţie
+                                    Detalii nivel de pregatire
                                 </th>
                                 <th>
-                                    Nivel echipament
+                                    Nivel de pregatire
                                 </th>
                                  <th>
-                                    Tip
+                                    Contact
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($machines as $machine)
+                            @foreach($operators as $operator)
                                 <tr>
-                                    <td>{{ $machine->name }}</td>
-                                    <td>{{ $machine->location_details }}</td>
-                                    <td>{{ $machine->level_equipment }}</td>
-                                    <td>{{ $machine->type }}</td>
+                                    <td>{{ $operator->name }}</td>
+                                    <td>{{ $operator->preparation_details }}</td>
+                                    <td>{{ $operator->preparation_level_id }}</td>
+                                    <td>{{ $operator->contact }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
 
-                    <a href="{{route('machines.create')}}" class="btn btn-warning">
-                       + Adaugă utilaj
+                    <a href="{{route('operators.create')}}" class="btn btn-warning">
+                       + Adaugă operator
                     </a>
                 </div>
             </div>

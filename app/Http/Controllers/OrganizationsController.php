@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Operator;
+use App\Models\Organization;
 
-class OperatorsController extends Controller
+class OrganizationsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class OperatorsController extends Controller
     public function index()
     {
         //
-        $operators = Operator::all();
-        return view('operators.list', compact('operators'));
+        $organizations = Organization::all();
+        return view('organizations.list', compact('organizations'));
     }
 
     /**
@@ -27,7 +27,7 @@ class OperatorsController extends Controller
     public function create()
     {
         //
-        return view('operators.create');
+        return view('organizations.create');
     }
 
     /**
@@ -39,12 +39,12 @@ class OperatorsController extends Controller
     public function store(Request $request)
     {
         //
-         $request->validate([
+        $request->validate([
             'name'=>'required',
         ]);
-        $operator = new Operator($request->except(["_method", "_token"]));
-        $operator->save();
-        return redirect('/operators')->with('success', 'Operator has been added');
+        $organization = new Organization($request->except(["_method", "_token"]));
+        $organization->save();
+        return redirect('/organizations')->with('success', 'Organization has been added');
     }
 
     /**

@@ -9,6 +9,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
+
         <!-- Font awesome -->
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -36,7 +37,7 @@
 
             <div class="content container">
                 <div class="title">
-                    Registru utilaje
+                    Firme
                 </div>
 
                 <div>
@@ -47,30 +48,22 @@
                                     Nume
                                 </th>
                                 <th>
-                                    Detalii locaţie
-                                </th>
-                                <th>
-                                    Nivel echipament
-                                </th>
-                                 <th>
-                                    Tip
+                                    Registrul comerţului
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($machines as $machine)
+                            @foreach($companies as $company)
                                 <tr>
-                                    <td>{{ $machine->name }}</td>
-                                    <td>{{ $machine->location_details }}</td>
-                                    <td>{{ $machine->level_equipment }}</td>
-                                    <td>{{ $machine->type }}</td>
+                                    <td>{{ $company->name }}</td>
+                                    <td>{{ $company->trade_register }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
 
-                    <a href="{{route('machines.create')}}" class="btn btn-warning">
-                       + Adaugă utilaj
+                    <a href="{{route('companies.create')}}" class="btn btn-warning">
+                       + Adauga firmă 
                     </a>
                 </div>
             </div>

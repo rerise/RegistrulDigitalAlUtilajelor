@@ -36,7 +36,7 @@
 
             <div class="content container">
                 <div class="title">
-                    Registru utilaje
+                    Organizaţii
                 </div>
 
                 <div>
@@ -47,30 +47,22 @@
                                     Nume
                                 </th>
                                 <th>
-                                    Detalii locaţie
-                                </th>
-                                <th>
-                                    Nivel echipament
-                                </th>
-                                 <th>
-                                    Tip
+                                    Detalii
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($machines as $machine)
+                            @foreach($organizations as $organization)
                                 <tr>
-                                    <td>{{ $machine->name }}</td>
-                                    <td>{{ $machine->location_details }}</td>
-                                    <td>{{ $machine->level_equipment }}</td>
-                                    <td>{{ $machine->type }}</td>
+                                    <td>{{ $organization->name }}</td>
+                                    <td>{{ $organization->details }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
 
-                    <a href="{{route('machines.create')}}" class="btn btn-warning">
-                       + Adaugă utilaj
+                    <a href="{{route('organizations.create')}}" class="btn btn-warning">
+                       + Adauga organizaţie
                     </a>
                 </div>
             </div>

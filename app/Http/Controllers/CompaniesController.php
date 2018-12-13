@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Company;
 
-class OrgabizationsController extends Controller
+class CompaniesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,6 +15,8 @@ class OrgabizationsController extends Controller
     public function index()
     {
         //
+        $companies = Company::all();
+        return view('companies.list', compact('companies'));
     }
 
     /**
@@ -24,6 +27,7 @@ class OrgabizationsController extends Controller
     public function create()
     {
         //
+        return view('companies.create');
     }
 
     /**
@@ -35,6 +39,12 @@ class OrgabizationsController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'name'=>'required',
+        ]);
+        $company = new Company($request->except(["_method", "_token"]));
+        $company->save();
+        return redirect('/companies')->with('success', 'Company has been added');
     }
 
     /**

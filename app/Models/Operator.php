@@ -9,6 +9,7 @@ class Operator extends Model
     protected $fillable = [
 	    'name',
 	    'preparation_details',
-	    'preparation_level_id'
+	    'preparation_level_id',
+	    'contact'
 	];
 }

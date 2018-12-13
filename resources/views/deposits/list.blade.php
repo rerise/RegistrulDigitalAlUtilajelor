@@ -36,7 +36,7 @@
 
             <div class="content container">
                 <div class="title">
-                    Registru utilaje
+                    Depozite
                 </div>
 
                 <div>
@@ -50,27 +50,27 @@
                                     Detalii locaţie
                                 </th>
                                 <th>
-                                    Nivel echipament
+                                    Latitudine
                                 </th>
                                  <th>
-                                    Tip
+                                    Longitudine
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($machines as $machine)
+                            @foreach($deposits as $deposit)
                                 <tr>
-                                    <td>{{ $machine->name }}</td>
-                                    <td>{{ $machine->location_details }}</td>
-                                    <td>{{ $machine->level_equipment }}</td>
-                                    <td>{{ $machine->type }}</td>
+                                    <td>{{ $deposit->name }}</td>
+                                    <td>{{ $deposit->location_details }}</td>
+                                    <td>{{ $deposit->lat }}</td>
+                                    <td>{{ $deposit->lng }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
 
-                    <a href="{{route('machines.create')}}" class="btn btn-warning">
-                       + Adaugă utilaj
+                    <a href="{{route('deposits.create')}}" class="btn btn-warning">
+                       + Adaugă depozit
                     </a>
                 </div>
             </div>

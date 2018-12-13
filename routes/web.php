@@ -16,8 +16,10 @@ Route::get('/', function () {
 });
 
 Route::resource('machines', 'MachinesController');
-
-
+Route::resource('organizations', 'OrganizationsController');
+Route::resource('companies', 'CompaniesController');
+Route::resource('deposits', 'DepositsController');
+Route::resource('operators', 'OperatorsController');
 // Route::get('/machines', ['uses' => 'MachinesController@list', 'as' => 'machines.list']);
 
 
