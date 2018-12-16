@@ -24,7 +24,7 @@
 @section('content')
 <div>               
    
-   <p><b>Registrul utilajelor</b> este un proiect initiat de Re:Rise (Asociatia pentru Reducerea Riscului Seismic cu scopul...........</p>
+   <p><b>Registrul utilajelor</b> este un proiect iniţiat de către Re:Rise (Asociaţia pentru Reducerea Riscului Seismic cu scopul...........</p>
 </div>
        
 @endsection

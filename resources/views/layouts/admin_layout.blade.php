@@ -135,19 +135,24 @@
 
                     <h3 class="menu-title">Re:Rise</h3><!-- /.menu-title -->
                     <li>
-                        <a href="rerise.org"> <i class="menu-icon ti-help"></i>Despre Re:Rise</a>
+                        <a href="http://rerise.org" target="_blank"> <i class="menu-icon ti-help"></i>Despre Re:Rise</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-paper-plane"></i>Contact</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-facebook"></i><a target="_blank" href="https://web.facebook.com/ReRise.org/">Facebook</a></li>
                             <li><i class="menu-icon fa fa-linkedin"></i><a target="_blank" href="https://www.linkedin.com/company/re-rise---the-seismic-risk-reduction-organization/" class="icon alt fa-linkedin">LinkedIn</a></li>
-                            <li><i class="menu-icon ti ti-email"></i><a href="pages-forget.html">Email</a></li>
+                            <li><i class="menu-icon ti ti-email"></i><a href="mailto:office@rerise.org"><span class="label">office@rerise.org</span></a></li>
                         </ul>
                     </li>
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
+<!--         <p class="text-center"><small>Proiect iniţiat de <b><a href="http://rerise.org" target="_blank"> <i class="menu-icon fa fa-globe"> </i> Re:Rise</a></b> în colaborare cu DSU</small></p>   -->
+    <p class="text-center"><small>Proiect iniţiat de <b><a href="http://rerise.org" target="_blank"> <i class="menu-icon fa fa-globe"> </i> Re:Rise</a></b> </small></p>  
+
+
     </aside><!-- /#left-panel -->
 
     <!-- Left Panel -->
