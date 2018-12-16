@@ -27,16 +27,20 @@
         <thead class="thead-dark">
             <tr>
                 <th>
-                    Nume
+                    Nume (Marca/Model)
                 </th>
                 <th>
                     Detalii locaţie
                 </th>
+                <!-- Hidden - afisate doar pe harta -->
+                <!-- <th>
+                    Coordonate (lng, lat)
+                </th> -->
                 <th>
                     Nivel echipament
                 </th>
                  <th>
-                    Tip
+                    Tip (Grup de produse, Categorie)
                 </th>
             </tr>
         </thead>
@@ -45,6 +49,12 @@
                 <tr>
                     <td>{{ $machine->name }}</td>
                     <td>{{ $machine->location_details }}</td>
+                    <!-- Hidden - afisate doar pe harta -->
+                    <!-- <td>
+                        @if($machine->lng)
+                            {{ $machine->lng }}, 
+                        @endif
+                        {{ $machine->lat }}</td> -->
                     <td>{{ $machine->level_equipment }}</td>
                     <td>{{ $machine->type }}</td>
                 </tr>
