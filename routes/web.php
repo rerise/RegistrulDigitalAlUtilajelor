@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+// TODO: register, login & prefixare cu /admin/??
 Route::resource('machines', 'MachinesController');
 Route::resource('organizations', 'OrganizationsController');
 Route::resource('companies', 'CompaniesController');
@@ -30,3 +32,13 @@ Route::resource('operators', 'OperatorsController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/template', function() {
+	return view('template');
+});
+
+
+Route::get('/about', function() {
+	return view('about');
+});
