@@ -61,11 +61,14 @@
                       <textarea name="details" class="form-control"></textarea>
                   </div>
                   
-                  <button type="submit" class="btn btn-primary">Add</button>
+                  <button type="submit" class="btn btn-primary">Adaugă</button>
                   <br>
-                  <a href="{{route('organizations.index')}}">
-                    Inapoi la Lista organizaţii
-                </a>
+                  <div class="pt-3">
+                    <a href="{{route('organizations.index')}}">
+                      <i class="fa fa-chevron-left"></i>
+                      Înapoi la list organizaţii
+                    </a>
+                  </div>
             </form>
         </div>
     </div>

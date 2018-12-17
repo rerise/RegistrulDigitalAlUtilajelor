@@ -68,11 +68,14 @@
                       <input type="text" class="form-control" name="contact"/>
                   </div>
                   
-                  <button type="submit" class="btn btn-primary">Add</button>
+                  <button type="submit" class="btn btn-primary">Adaugă</button>
                   <br>
-                  <a href="{{route('operators.index')}}">
-                    Inapoi la Lista operatori
-                </a>
+                  <div class="pt-3">
+                    <a href="{{route('operators.index')}}">
+                      <i class="fa fa-chevron-left"></i>
+                      Înapoi la lista operatori
+                    </a>
+                  </div>
             </form>
         </div>
     </div>

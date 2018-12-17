@@ -68,7 +68,7 @@
                       <input type="text" class="form-control" name="lng"/>
                   </div>
                   
-                  <button type="submit" class="btn btn-primary">Add</button>
+                  <button type="submit" class="btn btn-primary">Adaugă</button>
                   <br>
                   <a href="{{route('deposits.index')}}">
                     Inapoi la Lista depozite

@@ -12,7 +12,7 @@
         <div class="page-header float-right">
             <div class="page-title">
                 <ol class="breadcrumb text-right">
-                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Administrare</a></li>
                     <!-- <li><a href="#">Table</a></li> -->
                     <li class="active">Utilaje</li>
                 </ol>
@@ -39,8 +39,11 @@
                 <th>
                     Nivel echipament
                 </th>
-                 <th>
+                <th>
                     Tip (Grup de produse, Categorie)
+                </th>
+                <th>
+                    Acţiuni
                 </th>
             </tr>
         </thead>
@@ -57,6 +60,7 @@
                         {{ $machine->lat }}</td> -->
                     <td>{{ $machine->level_equipment }}</td>
                     <td>{{ $machine->type }}</td>
+                    <td></td>
                 </tr>
             @endforeach
         </tbody>

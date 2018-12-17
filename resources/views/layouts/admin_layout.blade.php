@@ -43,7 +43,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="./">Registrul Utilajelor</a>
-                <a class="navbar-brand hidden" href="./"><img src="{{asset('images/logo2.png')}}" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="./">R</a>
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -64,10 +64,14 @@
                         <ul class="sub-menu children dropdown-menu">
                             <li>
                                <i class="menu-icon ti-list"></i><a href="{{route('machines.index')}}">Lista utilaje</a>
-                           </li>
-                           <li>
+                            </li>
+                            <!-- TODO: -->
+                            <!-- <li>
+                               <i class="menu-icon ti-map"></i><a href="#">Harta utilaje</a>
+                            </li> -->
+                            <li>
                                <i class="menu-icon ti-plus"></i><a href="{{route('machines.create')}}">Adauga utilaj</a>
-                           </li>
+                            </li>
                        </ul>
                     </li>
 
@@ -112,21 +116,33 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-md"></i>Nivel pregatire operatori</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li>
-                               <i class="menu-icon ti-list"></i><a href="{{route('operators.index')}}">Lista operatori</a>
+                               <i class="menu-icon ti-list"></i><a href="{{route('operators.index')}}">Lista nivel pregatire operatori</a>
                            </li>
                            <li>
-                               <i class="menu-icon ti-plus"></i><a href="{{route('operators.create')}}">Adauga operator</a>
+                               <i class="menu-icon ti-plus"></i><a href="{{route('operators.create')}}">Adauga nivel pregatire operator</a>
                            </li>
                        </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-rocket"></i>Tipuri utilaje</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-rocket"></i>Categorii utilaje</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li>
-                               <i class="menu-icon ti-list"></i><a href="{{route('operators.index')}}">Lista operatori</a>
+                               <i class="menu-icon ti-list"></i><a href="{{route('machine-categories.index')}}">Listă categorii utilaje</a>
                            </li>
                            <li>
-                               <i class="menu-icon ti-plus"></i><a href="{{route('operators.create')}}">Adauga operator</a>
+                               <i class="menu-icon ti-plus"></i><a href="{{route('machine-categories.create')}}">Adauga categorie utilaj</a>
+                           </li>
+                       </ul>
+                    </li>
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cog"></i>Caracteristici utilaje</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li>
+                               <i class="menu-icon ti-list"></i><a href="{{route('machine-parameters.index')}}">Lista caracteristici</a>
+                           </li>
+                           <li>
+                               <i class="menu-icon ti-plus"></i><a href="{{route('machine-parameters.create')}}">Adauga caracteristică</a>
                            </li>
                        </ul>
                     </li>

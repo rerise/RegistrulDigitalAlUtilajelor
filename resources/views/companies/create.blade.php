@@ -61,11 +61,14 @@
                       <input type="text" class="form-control" name="trade_register"/>
                   </div>
                   
-                  <button type="submit" class="btn btn-primary">Add</button>
+                  <button type="submit" class="btn btn-primary">Adaugă</button>
                   <br>
-                  <a href="{{route('companies.index')}}">
-                    Inapoi la Lista firme
-                </a>
+                  <div class="pt-3">
+                    <a href="{{route('companies.index')}}">
+                      <i class="fa fa-chevron-left"></i>
+                      Înapoi la list firme
+                    </a>
+                  </div>
             </form>
         </div>
     </div>

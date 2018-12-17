@@ -22,6 +22,10 @@ Route::resource('organizations', 'OrganizationsController');
 Route::resource('companies', 'CompaniesController');
 Route::resource('deposits', 'DepositsController');
 Route::resource('operators', 'OperatorsController');
+
+Route::resource('machine-parameters', 'MachineParametersController');
+Route::resource('machine-categories', 'MachineCategoriesController');
+
 // Route::get('/machines', ['uses' => 'MachinesController@list', 'as' => 'machines.list']);
 
 
