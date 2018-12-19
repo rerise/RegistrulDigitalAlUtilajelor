@@ -87,7 +87,9 @@ class MachinesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $machine = Machine::find($id);
+        $machine->delete();
+        return redirect('/machines');
     }
 
     public function map() {

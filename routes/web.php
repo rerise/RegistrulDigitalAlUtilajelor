@@ -55,3 +55,6 @@ Route::group(['middleware' => ['auth']], function () {
 		return view('about');
 	});
 });
+
+
+Route::get("/add-machines", "AddDataController@addMachines");

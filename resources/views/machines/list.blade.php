@@ -36,9 +36,10 @@
                 <!-- <th>
                     Coordonate (lng, lat)
                 </th> -->
-                <th>
+                <!-- hidden -->
+               <!--  <th>
                     Nivel echipament
-                </th>
+                </th> -->
                 <th>
                     Tip (Grup de produse, Categorie)
                 </th>
@@ -58,13 +59,23 @@
                             {{ $machine->lng }}, 
                         @endif
                         {{ $machine->lat }}</td> -->
-                    <td>{{ $machine->level_equipment }}</td>
+                    <!-- <td>{{ $machine->level_equipment }}</td> -->
                     <td>{{ $machine->type }}</td>
-                    <td></td>
+                    <td>
+                        <form action="/machines/{{$machine->id}}" method="POST">
+                        {{ csrf_field() }}
+                        {{ method_field('DELETE') }}
+                        <button class="btn btn-danger" value="submit" type="submit">
+                            <i class="fa fa-trash"></i>
+                        Şterge</button>
+                    </form>
+
+                    </td>
                 </tr>
             @endforeach
         </tbody>
     </table>
+
 
     <a href="{{route('machines.create')}}" class="btn btn-warning">
        + Adaugă utilaj

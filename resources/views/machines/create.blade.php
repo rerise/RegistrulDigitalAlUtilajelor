@@ -40,10 +40,11 @@
                       <label for="location_details">Locaţie:</label>
                       <input type="text" class="form-control" name="location_details"/>
                   </div>
-                  <div class="form-group">
+                  <!-- Hidden for now -->
+                <!--   <div class="form-group">
                       <label for="level_equipment">Nivel echipament:</label>
                       <input type="text" class="form-control" name="level_equipment"/>
-                  </div>
+                  </div> -->
                   <div class="form-group">
                       <label for="type">Tip:</label>
                       <input type="text" class="form-control" name="type"/>
