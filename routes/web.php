@@ -48,6 +48,9 @@ Route::group(['middleware' => ['auth']], function () {
 
 	 //
 
+
+	Route::get('/machines-map', 'MachinesController@map');
+
 	Route::get('/about', function() {
 		return view('about');
 	});

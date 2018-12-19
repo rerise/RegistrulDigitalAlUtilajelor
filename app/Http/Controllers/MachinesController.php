@@ -89,4 +89,8 @@ class MachinesController extends Controller
     {
         //
     }
+
+    public function map() {
+        return view('machines.map');
+    }
 }
