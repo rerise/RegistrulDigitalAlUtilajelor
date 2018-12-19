@@ -27,7 +27,7 @@
         <thead class="thead-dark">
             <tr>
                 <th>
-                    Nume (Marca/Model)
+                    Nume (Marcă/Model)
                 </th>
                 <th>
                     Detalii locaţie

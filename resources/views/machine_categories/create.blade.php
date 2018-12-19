@@ -4,7 +4,7 @@
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
-                <h1>Adauga Categorie Utilaj</h1>
+                <h1>Adaugă Categorie Utilaj</h1>
             </div>
         </div>
     </div>
@@ -42,7 +42,7 @@
         <div class="pt-3">
           <a href="{{route('machine-categories.index')}}">
             <i class="fa fa-chevron-left"></i>
-            Înapoi la lista categorii utilaje
+            Înapoi la listă categorii utilaje
           </a>
         </div>
       </form>

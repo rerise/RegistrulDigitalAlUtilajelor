@@ -65,10 +65,9 @@
                             <li>
                                <i class="menu-icon ti-list"></i><a href="{{route('machines.index')}}">Lista utilaje</a>
                             </li>
-                            <!-- TODO: -->
-                            <!-- <li>
-                               <i class="menu-icon ti-map"></i><a href="#">Harta utilaje</a>
-                            </li> -->
+                            <li>
+                               <i class="menu-icon ti-map"></i><a href="/machines-map">Harta utilaje</a>
+                            </li>
                             <li>
                                <i class="menu-icon ti-plus"></i><a href="{{route('machines.create')}}">Adauga utilaj</a>
                             </li>

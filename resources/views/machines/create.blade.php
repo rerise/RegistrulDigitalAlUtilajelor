@@ -4,7 +4,7 @@
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
-                <h1>Adauga Utilaj</h1>
+                <h1>Adaugă Utilaj</h1>
             </div>
         </div>
     </div>
@@ -14,7 +14,7 @@
                 <ol class="breadcrumb text-right">
                     <li><a href="#">Administrare</a></li>
                     <!-- <li><a href="#">Table</a></li> -->
-                    <li class="active">Adauga utilaj</li>
+                    <li class="active">Adaugă utilaj</li>
                 </ol>
             </div>
         </div>

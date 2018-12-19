@@ -15,13 +15,113 @@
         <script> 
             var markerOptions = 
             [
+               // {
+               //      icon: tomtom.L.icon({
+               //          iconUrl: '{{asset("images/markers/b1.png")}}',
+               //          // iconUrl: '{{asset("images/markers/1.3.png")}}',
+               //          iconSize: [30, 34],
+               //          iconAnchor: [15, 34]
+               //      })
+               //  },
+
+               //  {
+               //      icon: tomtom.L.icon({
+               //          iconUrl: '{{asset("images/markers/b2.png")}}',
+               //          // iconUrl: '{{asset("images/markers/1.3.png")}}',
+               //          iconSize: [30, 34],
+               //          iconAnchor: [15, 34]
+               //      })
+               //  },
+                
+               //  {
+               //      icon: tomtom.L.icon({
+               //          iconUrl: '{{asset("images/markers/b3.png")}}',
+               //          // iconUrl: '{{asset("images/markers/1.3.png")}}',
+               //          iconSize: [30, 34],
+               //          iconAnchor: [15, 34]
+               //      })
+               //  },
+
+               //  {
+               //      icon: tomtom.L.icon({
+               //          iconUrl: '{{asset("images/markers/b4.png")}}',
+               //          // iconUrl: '{{asset("images/markers/1.3.png")}}',
+               //          iconSize: [30, 34],
+               //          iconAnchor: [15, 34]
+               //      })
+               //  },
+
+               //  {
+               //      icon: tomtom.L.icon({
+               //          iconUrl: '{{asset("images/markers/b5.png")}}',
+               //          // iconUrl: '{{asset("images/markers/1.3.png")}}',
+               //          iconSize: [30, 34],
+               //          iconAnchor: [15, 34]
+               //      })
+               //  },
+
+               //  {
+               //      icon: tomtom.L.icon({
+               //          iconUrl: '{{asset("images/markers/6.png")}}',
+               //          // iconUrl: '{{asset("images/markers/1.3.png")}}',
+               //          iconSize: [30, 34],
+               //          iconAnchor: [15, 34]
+               //      })
+               //  },
                 {
                     icon: tomtom.L.icon({
-                        iconUrl: '{{asset("images/markers/buldozer.png")}}',
+                        iconUrl: '{{asset("images/markers/1.4.png")}}',
+                        // iconUrl: '{{asset("images/markers/1.3.png")}}',
                         iconSize: [30, 34],
                         iconAnchor: [15, 34]
                     })
                 },
+                {
+                    icon: tomtom.L.icon({
+                        iconUrl: '{{asset("images/markers/2.4.png")}}',
+                        // iconUrl: '{{asset("images/markers/2.3.png")}}',
+                        iconSize: [30, 34],
+                        iconAnchor: [15, 34]
+                    })
+                },
+                {
+                    icon: tomtom.L.icon({
+                        iconUrl: '{{asset("images/markers/3.4.png")}}',
+                        // iconUrl: '{{asset("images/markers/3.3.png")}}',
+                        iconSize: [30, 34],
+                        iconAnchor: [15, 34]
+                    })
+                },
+                {
+                    icon: tomtom.L.icon({
+                        iconUrl: '{{asset("images/markers/4.4.png")}}',
+                        // iconUrl: '{{asset("images/markers/4.3.png")}}',
+                        iconSize: [30, 34],
+                        iconAnchor: [15, 34]
+                    })
+                },
+                {
+                    icon: tomtom.L.icon({
+                        iconUrl: '{{asset("images/markers/5.4.png")}}',
+                        // iconUrl: '{{asset("images/markers/5.3.png")}}',
+                        iconSize: [30, 34],
+                        iconAnchor: [15, 34]
+                    })
+                },
+                {
+                    icon: tomtom.L.icon({
+                        iconUrl: '{{asset("images/markers/6.png")}}',
+                        iconSize: [30, 34],
+                        iconAnchor: [15, 34]
+                    })
+                },
+                // {
+                //     icon: tomtom.L.icon({
+                //         iconUrl: '{{asset("images/markers/buldozer.png")}}',
+                //         iconSize: [30, 34],
+                //         iconAnchor: [15, 34]
+                //     })
+                // },
                 //  {
                 //     icon: tomtom.L.icon({
                 //         iconUrl: '{{asset("images/markers/buldozer2.png")}}',
@@ -50,20 +150,20 @@
                 //         iconAnchor: [15, 34]
                 //     })
                 // },
-                {
-                    icon: tomtom.L.icon({
-                        iconUrl: '{{asset("images/markers/truck2.png")}}',
-                        iconSize: [30, 34],
-                        iconAnchor: [15, 34]
-                    })
-                },
-                {
-                    icon: tomtom.L.icon({
-                        iconUrl: '{{asset("images/markers/truck3.png")}}',
-                        iconSize: [30, 34],
-                        iconAnchor: [15, 34]
-                    })
-                },
+                // {
+                //     icon: tomtom.L.icon({
+                //         iconUrl: '{{asset("images/markers/truck2.png")}}',
+                //         iconSize: [30, 34],
+                //         iconAnchor: [15, 34]
+                //     })
+                // },
+                // {
+                //     icon: tomtom.L.icon({
+                //         iconUrl: '{{asset("images/markers/truck3.png")}}',
+                //         iconSize: [30, 34],
+                //         iconAnchor: [15, 34]
+                //     })
+                // },
                 // {
                 //     icon: tomtom.L.icon({
                 //         iconUrl: '{{asset("images/markers/buldozer2.png")}}',
@@ -124,7 +224,8 @@
                 // center: promenadaMallCoordinates,
                 center: bucharestCoordinates,
                 // zoom: 15
-                zoom: 11
+                zoom: 11,
+                layer: "hybrid"
             });
 
             // var marker = tomtom.L.marker(promenadaMallCoordinates, markerOptions).addTo(map);
@@ -181,7 +282,7 @@
               }
             }
 
-            addMarkers(20);
+            addMarkers(50);
             // // setInterval(function() {
             //   var randLat = (Math.random() * (maxLat - minLat) + minLat).toFixed(7)
             //   var randLng = (Math.random() * (maxLng - minLng) + minLng).toFixed(7)
