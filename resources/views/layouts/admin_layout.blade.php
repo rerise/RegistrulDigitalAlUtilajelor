@@ -111,7 +111,7 @@
                     </li>
 
                     <h3 class="menu-title">Setari</h3><!-- /.menu-title -->
-                    <li class="menu-item-has-children dropdown">
+                   <!--  <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user-md"></i>Nivel pregatire operatori</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li>
@@ -121,7 +121,7 @@
                                <i class="menu-icon ti-plus"></i><a href="{{route('operators.create')}}">Adauga nivel pregatire operator</a>
                            </li>
                        </ul>
-                    </li>
+                    </li> -->
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-rocket"></i>Categorii utilaje</a>
                         <ul class="sub-menu children dropdown-menu">

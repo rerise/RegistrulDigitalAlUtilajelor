@@ -41,14 +41,15 @@
                       <label for="operator_id">Id operator:</label>
                       <input type="text" class="form-control" name="operator_id"/>
                   </div> -->
+                  <!-- TODO: fix it -->
                   <div class="form-group">
-                      <label for="preparation_details">Detalii nivel de pregatire</label>
+                      <label for="preparation_details">Nivel de pregatire</label>
                       <input type="text" class="form-control" name="preparation_details"/>
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                       <label for="preparation_level_id">Nivel de pregatire</label>
                       <input type="text" class="form-control" name="preparation_level_id"/>
-                  </div>
+                  </div> -->
                   <div class="form-group">
                       <label for="contact">Contact</label>
                       <input type="text" class="form-control" name="contact"/>

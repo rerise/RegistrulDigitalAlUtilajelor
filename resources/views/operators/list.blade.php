@@ -29,9 +29,10 @@
                                 <th>
                                     Nume
                                 </th>
-                                <th>
+                                <!-- TODO: fix -->
+                               <!--  <th>
                                     Detalii nivel de pregatire
-                                </th>
+                                </th> -->
                                 <th>
                                     Nivel de pregatire
                                 </th>
@@ -45,7 +46,7 @@
                                 <tr>
                                     <td>{{ $operator->name }}</td>
                                     <td>{{ $operator->preparation_details }}</td>
-                                    <td>{{ $operator->preparation_level_id }}</td>
+                                    <!-- <td>{{ $operator->preparation_level_id }}</td> -->
                                     <td>{{ $operator->contact }}</td>
                                 </tr>
                             @endforeach
