@@ -91,7 +91,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Registru Utilaje
+                    Registrul Utilajelor
                 </div>
 
                 <div>

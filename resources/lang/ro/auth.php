@@ -13,12 +13,14 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-    'E-Mail' => 'E-Mail Address',
-    'password' => 'Password',
-    'remember' => 'Remember me',
-    'forgot_password' => 'Forgot Your Password?',
+    'failed' => 'Credenţiale greşite.',
+    'throttle' => 'Aţi depăşit limita de încercări greşite pentru parolă. Încercaţi mai tarziu.',
+    'E-Mail' => 'E-Mail',
+    'password' => 'Parolă',
+    // 'remember' => 'Ţine minte'
+    'remember' => 'Păstrează autentificat',
+    'forgot_password' => 'Ai uitat parola?',
     'login' => 'Login',
-    'reset_password' => 'Reset password'
+    'reset_password' => 'Resetează parola'
+
 ];
