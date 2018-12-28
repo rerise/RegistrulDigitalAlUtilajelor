@@ -39,7 +39,8 @@
                 }
 
                 .links > a {
-                    color: #636b6f;
+                    /*color: #636b6f;*/
+                    color: #e0a800;
                     padding: 0 25px;
                     font-size: 13px;
                     font-weight: 600;
@@ -123,4 +124,15 @@
 
             .container {
                 padding-bottom: 2em;
+            }
+
+            a {
+                    /*color: #e0a800;*/
+                    color: #d28332;
+            }
+
+            a:hover {
+                    /*color: #e0a800;*/
+                    color: #d28332;
+                    color: #ad6d2b;
             }
