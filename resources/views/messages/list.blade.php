@@ -36,14 +36,19 @@
               <small class="text-muted">Primit la <b>{{ $message->created_at }}</b></small>
               <hr>
               <form action="/message-change-status/{{$message->id}}" 
-                method="post">
+                method="post" class="inline-display-form">
               @csrf
 
                 <button href="" class="btn btn-success" type="submit"><span><i class="fa fa-envelope"></i></span>&nbsp;Marcheaza ca citit</button>
-                <!-- TODO -->
-                <!-- <a href="" class="btn"><span><i class="fa fa-trash"></i></span>&nbsp;Sterge</a> -->
-
+                
               </form>
+               <form action="/messages/{{$message->id}}" method="POST" class="inline-display-form">
+                        {{ csrf_field() }}
+                        {{ method_field('DELETE') }}
+                        <button class="btn" value="submit" type="submit">
+                            <i class="fa fa-trash"></i>
+                        Şterge</button>
+                    </form>
                         
             </div>
           </div>
@@ -63,14 +68,20 @@
               <small class="text-muted">Primit la <b>{{ $message->created_at }}</b></small>
               <hr>
               <form action="/message-change-status/{{$message->id}}" 
-                method="post">
+                method="post" class="inline-display-form">
               @csrf
 
                 <button href="" class="btn btn" type="submit"><span><i class="fa fa-envelope"></i></span>&nbsp;Marcheaza ca necitit</button>
-                <!-- TODO: -->
-                 <!-- <a href="" class="btn"><span><i class="fa fa-trash"></i></span>&nbsp;Sterge</a> -->
-
-              </form>
+            </form>
+                
+                <form action="/messages/{{$message->id}}" method="POST" class="inline-display-form">
+                        {{ csrf_field() }}
+                        {{ method_field('DELETE') }}
+                        <button class="btn btn" value="submit" type="submit">
+                            <i class="fa fa-trash"></i>
+                        Şterge</button>
+                    </form>
+                
                         
             </div>
           </div>

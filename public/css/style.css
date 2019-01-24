@@ -137,6 +137,6 @@
                     color: #ad6d2b;
             }
 
-            .round-borders {
-                border-radius: 50%;
-            }
+        .inline-display-form {
+            display: inline;
+        }

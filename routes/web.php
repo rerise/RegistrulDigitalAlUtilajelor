@@ -38,6 +38,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 	Route::resource('machine-parameters', 'MachineParametersController');
 	Route::resource('machine-categories', 'MachineCategoriesController');
+	Route::resource('messages', 'MessagesController');
 
 	// Route::get('/machines', ['uses' => 'MachinesController@list', 'as' => 'machines.list']);
 
