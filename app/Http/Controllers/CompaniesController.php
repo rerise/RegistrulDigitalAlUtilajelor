@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Company;
+use App\Models\Message;
 
 class CompaniesController extends Controller
 {
@@ -42,8 +43,29 @@ class CompaniesController extends Controller
         $request->validate([
             'name'=>'required',
         ]);
+
         $company = new Company($request->except(["_method", "_token"]));
         $company->save();
+
+        if($request->message) {
+            $message = new Message([
+                "message" => $request->message,
+                "company_id" => $company->id,
+                "author" => $request->name 
+            ]);
+            $message->save();
+        }
+
+
+        $request->session()->flash('alert-success', 'Mulţumim! Datele au fost salvate');
+
+        if($request->noredirect)
+        {
+             return redirect()->back()->with('success', 'Mulţumim! Datele au fost salvate');   
+
+            // return back()->with('success', 'Company has been added');;   
+        }
+        
         return redirect('/companies')->with('success', 'Company has been added');
     }
 

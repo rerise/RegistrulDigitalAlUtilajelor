@@ -136,3 +136,7 @@
                     color: #d28332;
                     color: #ad6d2b;
             }
+
+            .round-borders {
+                border-radius: 50%;
+            }

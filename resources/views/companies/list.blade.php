@@ -31,7 +31,10 @@
                                     Nume
                                 </th>
                                 <th>
-                                    Registrul comerţului
+                                    Nr. Registrul comerţului
+                                </th>
+                                <th>
+                                    Detalii de contact
                                 </th>
                             </tr>
                         </thead>
@@ -40,6 +43,7 @@
                                 <tr>
                                     <td>{{ $company->name }}</td>
                                     <td>{{ $company->trade_register }}</td>
+                                    <td>{{ $company->contact_details }}</td>
                                 </tr>
                             @endforeach
                         </tbody>

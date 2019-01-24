@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Company extends Model
+class Message extends Model
 {
-	protected $table = 'companies';
+	protected $table = 'messages';
     
     protected $fillable = [
-	    'name', 'trade_register', 'contact_details'
+	    'author', 'message', 'company_id'
 	];
 }

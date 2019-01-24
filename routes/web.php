@@ -58,3 +58,6 @@ Route::group(['middleware' => ['auth']], function () {
 
 
 Route::get("/add-machines", "AddDataController@addMachines");
+Route::get("/messages", "MessagesController@index");
+
+Route::post("/message-change-status/{messageId}", "MessagesController@changeReadStatus");

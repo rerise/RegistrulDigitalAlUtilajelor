@@ -33,19 +33,43 @@
             <div>
              <form method="post" action="{{ route('companies.store') }}">
               @csrf
+
               <div class="form-group">
-                  
-                  <label for="name">Nume</label>
+                  <label for="name">Nume:</label>
                   <input type="text" class="form-control" name="name"/>
               </div>
-                 <!--  <div class="form-group">
-                      <label for="operator_id">Id operator:</label>
-                      <input type="text" class="form-control" name="operator_id"/>
-                  </div> -->
+
+              <div class="form-group">
+                  <label for="contact_details">Detalii de contact: </label>
+                  <textarea name="contact_details" class="form-control"></textarea>
+              </div>
+
+             <!--  <div class="form-group">
+                  <label for="operator_id">Id operator:</label>
+                  <input type="text" class="form-control" name="operator_id"/>
+              </div> -->
+              <div class="form-group">
+                  <label for="trade_register">Nr. registrul comerţului:</label>
+                  <input type="text" class="form-control" name="trade_register"/>
+              </div>
+
+              <hr>
+              <div class="row">
+                <div class="col-md-6">
                   <div class="form-group">
-                      <label for="trade_register">Registrul comerţului:</label>
-                      <input type="text" class="form-control" name="trade_register"/>
+                    <label for="lat">Latitudine: </label>
+                    <input type="text" class="form-control" name="lat"/>
                   </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="lng">Longitudine: </label>
+                    <input type="text" class="form-control" name="lng"/>
+                  </div>
+                </div>
+              </div>
+              
+              
                   
                   <button type="submit" class="btn btn-primary">Adaugă</button>
                   <br>

@@ -50,6 +50,13 @@
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="/about"> <i class="menu-icon fa fa-dashboard"></i>Despre </a>
+                        <a href="/messages"> <i class="menu-icon fa fa-envelope"></i>Mesaje 
+                            @if(DB::table('messages')->where('read_status', 0)->count() >0)
+                                <span class="badge badge-pill badge-warning  round-borders">
+                                {{ DB::table('messages')->where('read_status', 0)->count()}}
+                                </span>
+                            @endif
+                        </a>
                     </li>
                     <h3 class="menu-title">Administrare</h3><!-- /.menu-title -->
                     <!-- <li>

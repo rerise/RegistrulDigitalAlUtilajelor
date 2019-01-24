@@ -47,6 +47,7 @@
             <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">          
             <link rel="stylesheet" href="css/owl.carousel.css">
             <link rel="stylesheet" href="css/main.css">
+            <link rel="stylesheet" href="css/main_additional.css">
             
         <!-- <style>
             html, body {
@@ -103,6 +104,17 @@
     </head>
     <body>
 
+    <!--     <div class="flash-message">
+    @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+      @if(Session::has('alert-' . $msg))
+
+      <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></p>
+      @endif
+    @endforeach
+  </div> 
+ -->
+
+   
         <header id="header" id="home">
                 <div class="container">
                     <div class="row align-items-center justify-content-between d-flex">
@@ -150,96 +162,12 @@
                 <div class="container">
                     <div class="row fullscreen d-flex align-items-center justify-content-center">
                         <div class="banner-content col-lg-7 col-md-6 ">
-                            <h6 class="text-white ">the Royal Essence of Journey</h6>
+                            <!-- <h6 class="text-white ">the Royal Essence of Journey</h6> -->
                             <h1 class="text-white text-uppercase">
-                                Registrul Utilajelor v2.0               
+                                Registrul Utilajelor             
                             </h1>
                             <p class="pt-20 pb-20 text-white">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                            <a href="/machines" class="primary-btn text-uppercase">Lista utilaje </a>
-                        </div>
-                        <div class="col-lg-5  col-md-6 header-right">
-                            <h4 class="text-white pb-30">Inregistreaza-ti firma aici</h4>
-                            <form class="form" role="form" autocomplete="off">
-                                <div class="form-group">
-                                    <div class="default-select" id="default-select"">
-                                        <select>
-                                            <option value="" disabled selected hidden>Select Your Car</option>
-                                            <option value="1">BMW</option>
-                                            <option value="1">Farrari</option>
-                                            <option value="1">Toyota</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-6 wrap-left">
-                                        <div class="default-select" id="default-select"">
-                                            <select>
-                                                <option value="" disabled selected hidden>Pickup</option>
-                                                <option value="1">Pickup One</option>
-                                                <option value="1">Pickup Two</option>
-                                                <option value="1">Pickup Three</option>
-                                                <option value="1">Pickup Four</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 wrap-right">
-                                        <div class="input-group dates-wrap">                                          
-                                            <input id="datepicker" class="dates form-control" id="exampleAmount" placeholder="Date & time" type="text">                        
-                                            <div class="input-group-prepend">
-                                                <span  class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
-                                            </div>                                          
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-6 wrap-left">
-                                        <div class="default-select" id="default-select"">
-                                            <select>
-                                                <option value="" disabled selected hidden>Drop off</option>
-                                                <option value="1">Drop off One</option>
-                                                <option value="1">Drop off Two</option>
-                                                <option value="1">Drop off Three</option>
-                                                <option value="1">Drop off Four</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 wrap-right">
-                                        <div class="input-group dates-wrap">                                              
-                                            <input id="datepicker2" class="dates form-control" id="exampleAmount" placeholder="Date & time" type="text">                        
-                                            <div class="input-group-prepend">
-                                                <span  class="input-group-text"><span class="lnr lnr-calendar-full"></span></span>
-                                            </div>                                          
-                                        </div>
-                                    </div>
-                                </div>                              
-                                <div class="from-group">
-                                    <input class="form-control txt-field" type="text" name="name" placeholder="Your name">
-                                    <input class="form-control txt-field" type="email" name="email" placeholder="Email address">
-                                    <input class="form-control txt-field" type="tel" name="phone" placeholder="Phone number">
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-12">
-                                        <button type="reset" class="btn btn-default btn-lg btn-block text-center text-uppercase">Adauga utilaj</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>                                          
-                    </div>
-                </div>                  
-            </section>
-            <!-- End banner Area -->    
-
-
-<!-- Start feature Area -->
-            <section class="feature-area section-gap" id="service">
-                <div class="container">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-md-12 pb-40 header-text" style="font-weight: 600">
-                            <h1>Despre</h1>
-                            <p>
-                               <b>Registrul Digital al Utilajelor</b> este un proiect inițiat de către <a href="http://rerise.org" target="_blank"  target="_blank">Re:Rise (Asociația pentru Reducerea Riscului Seismic)</a> care pune la dispoziția <a href="https://www.facebook.com/departamenturgente" target="_blank">DSU (Departamentul pentru Situații de Urgență</a> - principala autoritate responsabilă pentru prevenirea și gestionarea situațiilor de urgență la nivel național) o bază de date cu utilajele deținute de către operatori privați (buldozere, excavatoare etc.), care să ajute la răspunsul post-seism al forțelor de salvare.
+                               <b>Registrul Digital al Utilajelor</b> este un proiect inițiat de către <a href="http://rerise.org" target="_blank"  target="_blank" class="yellow-link">Re:Rise (Asociația pentru Reducerea Riscului Seismic)</a> care pune la dispoziția <a href="https://www.facebook.com/departamenturgente" target="_blank" class="yellow-link">DSU (Departamentul pentru Situații de Urgență</a> - principala autoritate responsabilă pentru prevenirea și gestionarea situațiilor de urgență la nivel național) o bază de date cu utilajele deținute de către operatori privați (buldozere, excavatoare etc.), care să ajute la răspunsul post-seism al forțelor de salvare.
 <br>
 <br>
 Prin intermediul Registrului Digital al Utilajelor, DSU va putea avea acces instant, în timp real, la informații legate de locația și disponibilitatea utilajelor private, iar autoritățile le vor putea prelua de urgență pentru a fi folosite la intervențiile necesare după un cutremur major: eliberarea drumurilor și a căilor de acces, salvarea persoanelor de sub dărâmături, punerea în siguranță a structurilor afectate ș.a.
@@ -247,12 +175,65 @@ Prin intermediul Registrului Digital al Utilajelor, DSU va putea avea acces inst
 <br>
 
 Conform legilor în vigoare din România, în momentul declarării stării de necesitate, autoritățile responsabile pentru intervenție pot prelua, pe o durată limitată, utilaje private necesare acțiunilor de salvare. Registrul Digital al Utilajelor vine în sprijinul DSU pentru a accelera procesul de salvare și pentru a limita numărul de victime.</p>
+                            <a href="/machines" class="primary-btn text-uppercase">Lista utilaje </a>
                         </div>
-                    </div>
+                        <div class="col-lg-5  col-md-6 header-right">
 
-           
-           </div>
-        </section>
+                                @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+      @if(Session::has('alert-' . $msg))
+
+      <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></p>
+      @endif
+    @endforeach
+    
+                            <h4 class="text-white pb-30">Înregistrează-ti firma/organizaţia aici</h4>
+                            <!-- <form class="form" role="form" autocomplete="off"> -->
+
+<form method="post" class="form" role="form"  action="{{ route('companies.store') }}">
+              @csrf
+
+              <input type="hidden" name="noredirect" value="true">
+              <div class="form-group">
+                  <label for="name">Nume:</label>
+                  <input type="text" class="form-control" name="name" 
+                  placeholder="Nume" />
+              </div>
+
+
+              <div class="form-group">
+                  <label for="contact_details">Detalii de contact: </label>
+                  <textarea name="contact_details" class="form-control"
+                  placeholder="Detalii de contact"></textarea>
+              </div>
+
+             <!--  <div class="form-group">
+                  <label for="trade_register">Nr. registrul comerţului:</label>
+                  <input type="text" class="form-control" name="trade_register" placeholder="Nr. registrul comerţului" />
+              </div> -->
+
+              <hr>
+                            <h4 class="text-white pb-30">Lasă-ne un mesaj</h4>
+
+               <div class="form-group">
+                  <textarea name="message" class="form-control"
+                  placeholder="Mesaj pentru noi (opţional)"></textarea>
+              </div>
+
+                      
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-default btn-lg btn-block text-center text-uppercase">Înregistrează</button>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>                                          
+                    </div>
+                </div>                  
+            </section>
+            <!-- End banner Area -->    
+
 
 
             <footer class="footer-area section-gap">
@@ -309,8 +290,8 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
                                 <!-- <p>Stay update with our latest</p> -->
                                 <div class="" id="mc_embed_signup">
                                     <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-                                        <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
-                                            <button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
+                                        <input class="form-control" name="EMAIL" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+                                            <button class="click-btn btn btn-default"><span><i class="fa fa-envelope"></i></span></button>
                                             <div style="position: absolute; left: -5000px;">
                                                 <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
                                             </div>
@@ -322,7 +303,7 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
                         </div>  
                         <p class="mt-50 mx-auto footer-text col-lg-12">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
- This project was initiated by <a href="http://rerise.org" target="_blank">ReRise</a> <br> Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+ Proiect iniţiat de către <a href="http://rerise.org" target="_blank">ReRise</a> <br>  Front-end template - Copyright &copy;<script>document.write(new Date().getFullYear());</script> - made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
 

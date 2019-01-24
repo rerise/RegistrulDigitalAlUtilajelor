@@ -1,0 +1,9 @@
+.yellow-link {
+	color: #f9b93c;
+}
+
+a.yellow-link:hover {
+	color: #f9b93c;
+	font-weight: bold;
+
+}
