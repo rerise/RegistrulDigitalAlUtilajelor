@@ -119,11 +119,11 @@
                 <div class="container">
                     <div class="row align-items-center justify-content-between d-flex">
                       <div id="logo">
-                        <a href="index.html"><img src="images/logo.png" alt="" title="" /></a>
+                        <a href="/"><img src="images/logo.png" alt="" title="" /></a>
                       </div>
                       <nav id="nav-menu-container">
                         <ul class="nav-menu">
-                          <!-- <li class="menu-active"><a href="index.html">Home</a></li> -->
+                          <!-- <li class="menu-active"><a href="/">Home</a></li> -->
                           <!-- <li><a href="about.html">Despre</a></li> -->
                           <!-- <li><a href="cars.html">Cars</a></li> -->
                           <!-- <li><a href="service.html">Service</a></li> -->
@@ -138,6 +138,8 @@
                           <li>  
                             @if (Route::has('login'))
                                 @auth
+                                    <a class=nav-link" href="/machines">Administrare</a>
+
                                     <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"> Logout</a>
                                                      
@@ -179,6 +181,16 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
                         </div>
                         <div class="col-lg-5  col-md-6 header-right">
 
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
                                 @foreach (['danger', 'warning', 'success', 'info'] as $msg)
       @if(Session::has('alert-' . $msg))
 
@@ -186,10 +198,14 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
       @endif
     @endforeach
     
-                            <h4 class="text-white pb-30">Înregistrează-ti firma/organizaţia aici</h4>
+                        <h4 class="text-white pb-30">
+                            Lasă-ne detaliile tale de contact aici/
+                            <br>
+                            Înregistrează-ţi firma/organizaţia/
+                        </h4>
                             <!-- <form class="form" role="form" autocomplete="off"> -->
 
-<form method="post" class="form" role="form"  action="{{ route('companies.store') }}">
+<form method="post" class="form" role="form"  action="{{ route('contacts.store') }}">
               @csrf
 
               <input type="hidden" name="noredirect" value="true">
@@ -212,7 +228,9 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
               </div> -->
 
               <hr>
-                            <h4 class="text-white pb-30">Lasă-ne un mesaj</h4>
+                            <h4 class="text-white pb-30">
+                                <i class="fa fa-envelope"></i>&nbsp;
+                            Lasă-ne un mesaj</h4>
 
                <div class="form-group">
                   <textarea name="message" class="form-control"
@@ -244,6 +262,14 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
                                 <!-- <h6>Quick links</h6> -->
                                 <ul>
                                     <li><a href="http://rerise.org" target="_blank"><img src="{{asset('images/rerise_logo.jpg')}}" class="image image-responsive img img-thumbnail img-responsive"></a></li>
+                                    <li class="text-center">office@rerise.org</li>
+                                <div class="footer-social text-center">
+                                    <a href="https://web.facebook.com/ReRise.org"  target="_blank"><i class="fa fa-facebook"></i></a>
+                                    <a href="http://rerise.org" target="_blank"><i class="fa fa-globe"></i></a>
+                                    <a href="mailto:office@rerise.org"><i class="fa fa-envelope" target="_blank"></i></a>
+                                    <a href="https://www.linkedin.com/company/re-rise---the-seismic-risk-reduction-organization/" target="_blank"><i class="fa fa-linkedin" ></i></a>
+                                </div>
+
                                     <!-- <li><a href="http://rerise.org" target="_blank">rerise.org</a></li> -->
                                     <!-- <li><a href="#">Investor Relations</a></li> -->
                                     <!-- <li><a href="#">Terms of Service</a></li> -->
@@ -271,31 +297,36 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
                                     <li><a href="#">Terms of Service</a></li>
                                 </ul>      -->                          
                             </div>
-                        </div>                                              
+                        </div>                    
+
                         <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
                             <div class="single-footer-widget">
-                                <h6>Contactează-ne</h6>
-                                <!-- <p>Let us be social</p> -->
+<!--                                 <h6>Contactează-ne</h6>
+                               
                                 <div class="footer-social d-flex align-items-center">
                                     <a href="https://web.facebook.com/ReRise.org"  target="_blank"><i class="fa fa-facebook"></i></a>
                                     <a href="http://rerise.org" target="_blank"><i class="fa fa-globe"></i></a>
                                     <a href="mailto:office@rerise.org"><i class="fa fa-envelope" target="_blank"></i></a>
                                     <a href="https://www.linkedin.com/company/re-rise---the-seismic-risk-reduction-organization/" target="_blank"><i class="fa fa-linkedin" ></i></a>
                                 </div>
-                            </div>
-                        </div>                          
+ -->                            </div>
+                        </div>    
+                        <!-- newsletter: TODO                       -->
                         <div class="col-lg-4  col-md-6 col-sm-6">
                             <div class="single-footer-widget">
                                 <h6>Newsletter</h6>
-                                <!-- <p>Stay update with our latest</p> -->
-                                <div class="" id="mc_embed_signup">
-                                    <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-                                        <input class="form-control" name="EMAIL" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
-                                            <button class="click-btn btn btn-default"><span><i class="fa fa-envelope"></i></span></button>
+                                <div class="">
+                                    <form action="/newsletter" method="post" class="form-inline">
+                                        @csrf
+                                        <input class="form-control" name="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+
+                                        <button class="click-btn btn btn-default" type="submit"><span><i class="fa fa-envelope"></i></span></button>
+                                         
+                                         <!--    <button class="click-btn btn btn-default"><span><i class="fa fa-envelope"></i></span></button>
                                             <div style="position: absolute; left: -5000px;">
                                                 <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
                                             </div>
-
+ -->
                                         <div class="info"></div>
                                     </form>
                                 </div>

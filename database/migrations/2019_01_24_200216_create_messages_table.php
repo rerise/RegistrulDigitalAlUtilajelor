@@ -13,15 +13,17 @@ class CreateMessagesTable extends Migration
      */
     public function up()
     {
+        // Schema::dropIfExists('messages');
+        
         Schema::create('messages', function (Blueprint $table) {
             $table->increments('id');
             $table->string('author')->nullable();
             $table->text("message");
-            $table->unsignedInteger('company_id')->nullable();
+            $table->unsignedInteger('contact_id')->nullable();
 
             $table->timestamps();
 
-            $table->foreign('company_id')->references('id')->on('companies');
+            $table->foreign('contact_id')->references('id')->on('contacts');
             
         });
     }

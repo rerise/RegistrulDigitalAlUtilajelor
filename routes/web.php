@@ -40,6 +40,9 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::resource('machine-categories', 'MachineCategoriesController');
 	Route::resource('messages', 'MessagesController');
 
+	Route::resource('contacts', 'ContactsController');
+	Route::resource('newsletters', 'NewsLettersController');
+
 	// Route::get('/machines', ['uses' => 'MachinesController@list', 'as' => 'machines.list']);
 
 
@@ -62,3 +65,7 @@ Route::get("/add-machines", "AddDataController@addMachines");
 Route::get("/messages", "MessagesController@index");
 
 Route::post("/message-change-status/{messageId}", "MessagesController@changeReadStatus");
+
+
+Route::post('/contacts', 'ContactsController@store')->name('contacts.store');
+Route::post('/newsletter', 'NewsLettersController@store')->name('newsletters.store');

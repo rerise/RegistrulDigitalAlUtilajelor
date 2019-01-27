@@ -49,13 +49,17 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/about"> <i class="menu-icon fa fa-dashboard"></i>Despre </a>
+                        <a href="/about"> <i class="menu-icon fa fa-dashboard"></i>Despre / Help</a>
                         <a href="/messages"> <i class="menu-icon fa fa-envelope"></i>Mesaje 
                             @if(DB::table('messages')->where('read_status', 0)->count() >0)
                                 <span class="badge badge-pill badge-warning  round-borders">
                                 {{ DB::table('messages')->where('read_status', 0)->count()}}
                                 </span>
                             @endif
+                        </a>
+                        <a href="/contacts"> <i class="menu-icon fa fa-users"></i>Contacte
+                        </a>
+                        <a href="/newsletters"> <i class="menu-icon fa fa-address-book"></i>Newsletter
                         </a>
                     </li>
                     <h3 class="menu-title">Administrare</h3><!-- /.menu-title -->
