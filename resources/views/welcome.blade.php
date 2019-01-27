@@ -318,7 +318,7 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
                                 <div class="">
                                     <form action="/newsletter" method="post" class="form-inline">
                                         @csrf
-                                        <input class="form-control" name="email" placeholder="Introdu email-ul tau aici..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+                                        <input class="form-control" name="email" placeholder="Introdu email-ul tau aici..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Introdu email-ul tau aici... '" required="" type="email">
 
                                         <button class="click-btn btn btn-default" type="submit"><span><i class="fa fa-envelope"></i></span></button>
                                          
