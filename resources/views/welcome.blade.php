@@ -201,7 +201,7 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
                         <h4 class="text-white pb-30">
                             Lasă-ne detaliile tale de contact aici/
                             <br>
-                            Înregistrează-ţi firma/organizaţia/
+                            Înregistrează-ţi firma/organizaţia
                         </h4>
                             <!-- <form class="form" role="form" autocomplete="off"> -->
 

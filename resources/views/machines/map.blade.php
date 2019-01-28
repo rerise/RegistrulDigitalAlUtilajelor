@@ -282,7 +282,7 @@
               }
             }
 
-            addMarkers(50);
+            addMarkers(20);
             // // setInterval(function() {
             //   var randLat = (Math.random() * (maxLat - minLat) + minLat).toFixed(7)
             //   var randLng = (Math.random() * (maxLng - minLng) + minLng).toFixed(7)
@@ -292,6 +292,7 @@
 
             //   addMarker(randLat, randLng, randomDegree)
             // // }, 4000); 
+
         </script> 
 </div>
 

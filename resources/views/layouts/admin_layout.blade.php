@@ -353,7 +353,7 @@
     <script src="{{asset('js/vendors/datatables.net-buttons/js/buttons.print.min.js')}}"></script>
     <script src="{{asset('js/vendors/datatables.net-buttons/js/buttons.colVis.min.js')}}"></script>
     <script src="{{asset('js/init-scripts/data-table/datatables-init.js')}}"></script>
-
+    @yield('scripts')
 </body>
 
 </html>

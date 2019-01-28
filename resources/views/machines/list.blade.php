@@ -33,9 +33,9 @@
                     Detalii locaţie
                 </th>
                 <!-- Hidden - afisate doar pe harta -->
-                <!-- <th>
+                <th>
                     Coordonate (lng, lat)
-                </th> -->
+                </th>
                 <!-- hidden -->
                <!--  <th>
                     Nivel echipament
@@ -54,11 +54,11 @@
                     <td>{{ $machine->name }}</td>
                     <td>{{ $machine->location_details }}</td>
                     <!-- Hidden - afisate doar pe harta -->
-                    <!-- <td>
+                    <td>
                         @if($machine->lng)
                             {{ $machine->lng }}, 
                         @endif
-                        {{ $machine->lat }}</td> -->
+                        {{ $machine->lat }}</td>
                     <!-- <td>{{ $machine->level_equipment }}</td> -->
                     <td>{{ $machine->type }}</td>
                     <td>
