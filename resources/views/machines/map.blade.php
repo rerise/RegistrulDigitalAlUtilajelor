@@ -1,3 +1,5 @@
+<!-- TODO: clean/reformat code -->
+<!-- TODO: display real locations of machines/companies -->
 @extends('layouts.admin_layout')
 
 @section('content')

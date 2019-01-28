@@ -1,3 +1,6 @@
+<!-- TODO: draggable marker should be allowed only inside Bucharest area -->
+<!-- TODO: clean/reformat code -->
+
 @extends('layouts.admin_layout')
 
 @section('breadcrumbs')
@@ -116,7 +119,7 @@
                //      })
                //  },
                ];
-               var bucharestCoordinates = [44.436718,26.100];
+               var bucharestCoordinates = [44.426718,26.100];
 
                var map = tomtom.L.map('map', {
                 key: '{{env("TOMTOM_KEY")}}',
@@ -176,47 +179,47 @@
             }
 
 
-// TODO: draggable marker should be allowed only inside Bucharest area
-marker = tomtom.L.marker(bucharestCoordinates, {
-  draggable: true
-}).bindPopup('Bucuresti');
+          // TODO: draggable marker should be allowed only inside Bucharest area
+          marker = tomtom.L.marker(bucharestCoordinates, {
+            draggable: true
+          }).bindPopup('Bucuresti');
 
-marker.on('dragend', function(e) {
-  updateMarkerPopup(e.target);
-});
+          marker.on('dragend', function(e) {
+            updateMarkerPopup(e.target);
+          });
 
 
-function updateMarkerPopup(marker) {
-  tomtom.reverseGeocode({position: marker.getLatLng()})
-  .go(function(response) {
-    if (response && response.address && response.address.freeformAddress) {
-      marker.setPopupContent(response.address.freeformAddress + ("<br><b>(Markerul se poate muta)</b>"));
-    } else {
-      marker.setPopupContent('No results found');
-    }
-    marker.openPopup();
-  });
-}
+          function updateMarkerPopup(marker) {
+            tomtom.reverseGeocode({position: marker.getLatLng()})
+            .go(function(response) {
+              if (response && response.address && response.address.freeformAddress) {
+                marker.setPopupContent(response.address.freeformAddress + ("<br><b>(Markerul se poate muta)</b>"));
+              } else {
+                marker.setPopupContent('No results found');
+              }
+              marker.openPopup();
+            });
+          }
 
-function addLocationToMap(locationCoordinates) {
-  console.log(marker);
-  // Adding marker to the map
-  // marker.position = locationCoordinates;
-  marker.setLatLng(locationCoordinates)
-  // Show popup each time the marker is moved
-  updateMarkerPopup(marker);
+          function addLocationToMap(locationCoordinates) {
+            console.log(marker);
+            // Adding marker to the map
+            // marker.position = locationCoordinates;
+            marker.setLatLng(locationCoordinates)
+            // Show popup each time the marker is moved
+            updateMarkerPopup(marker);
 
-  marker.addTo(map);
-  marker.openPopup();
+            marker.addTo(map);
+            marker.openPopup();
 
-}
+          }
 
-function updateLocations() {
-  markerPosition = marker.getLatLng();
-  document.getElementById("lat").value = markerPosition.lat;
-  document.getElementById("lng").value = markerPosition.lng;
-}
-addLocationToMap(bucharestCoordinates);
+          function updateLocations() {
+            markerPosition = marker.getLatLng();
+            document.getElementById("lat").value = markerPosition.lat;
+            document.getElementById("lng").value = markerPosition.lng;
+          }
+          addLocationToMap(bucharestCoordinates);
 
 
 </script> 
