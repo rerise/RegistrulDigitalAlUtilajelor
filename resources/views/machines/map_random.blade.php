@@ -1,12 +1,10 @@
 <!-- TODO: clean/reformat code -->
-<!-- TODO: decide icons -->
+<!-- This is the old version of the code, which puts random markers in the Bucharest area
+The newer version (whith real locations of the machines is available in map.blade.php file 
+from machines folder) -->
 @extends('layouts.admin_layout')
 
 @section('content')
-<a href="{{route('machines.create')}}" class="btn btn-danger">
-  <i class="fa fa-plus"></i>
-  Adauga utilaj
-</a>
  <link rel='stylesheet' type='text/css' href="{{asset('css/tomtom/map.css')}}"/> 
         <script src="{{asset('js/tomtom.min.js')}}"></script> 
         <style>
@@ -239,7 +237,7 @@
             // marker.bindPopup('Promenada Mall').openPopup();
 
         
-            var markerCnt=1;
+            var i=1;
             
             // lat, lng
             // Extreme points Bucharest to generate data
@@ -269,30 +267,36 @@
                 console.log(lng);
 
                 var marker = tomtom.L.marker(coordinates, markerOptions[degree]).addTo(map);
-                marker.bindPopup('Utilaj ' + markerCnt);
+                marker.bindPopup('Utilaj ' + i);
                 // marker.openPopup();
                 console.log("Marker added");
-                markerCnt++;
+                i++;
             }
 
-        
-        var machines = {!! json_encode($machines->toArray()) !!};
-        console.log(machines);
-        console.log(machines.length);
-        
-        for (var k=0; k<machines.length; k++) {
-          if(machines[k].lat!=null && machines[k].lng!=null) {
-            var minDegree = 0;
-            var maxDegree = 5;
-            maxDegree = markerOptions.length;
-            var randomDegree = Math.floor(Math.random() * (maxDegree - minDegree) + minDegree);
-            // addMarker(machines[k].lat, machines[k].lng);
-            // addMarker(machines[k].lat, machines[k].lng, 0);
-            addMarker(machines[k].lat, machines[k].lng, randomDegree);
+            function addMarkers(nr_markers) {
+              for(var i=0; i<nr_markers; i++) {
+                var randLat = (Math.random() * (maxLat - minLat) + minLat).toFixed(7)
+                var randLng = (Math.random() * (maxLng - minLng) + minLng).toFixed(7)
+                var minDegree = 0;
+                var maxDegree = 5;
+                maxDegree = markerOptions.length;
+                var randomDegree = Math.floor(Math.random() * (maxDegree - minDegree) + minDegree);
 
-          }
-        }
-        
+                addMarker(randLat, randLng, randomDegree)
+              }
+            }
+
+            addMarkers(20);
+            // // setInterval(function() {
+            //   var randLat = (Math.random() * (maxLat - minLat) + minLat).toFixed(7)
+            //   var randLng = (Math.random() * (maxLng - minLng) + minLng).toFixed(7)
+            //   var minDegree = 0;
+            //   var maxDegree = 5;
+            //   var randomDegree = Math.floor(Math.random() * (maxDegree - minDegree) + minDegree);
+
+            //   addMarker(randLat, randLng, randomDegree)
+            // // }, 4000); 
+
         </script> 
 </div>
 

@@ -93,6 +93,7 @@ class MachinesController extends Controller
     }
 
     public function map() {
-        return view('machines.map');
+        $machines = Machine::all();
+        return view('machines.map', compact('machines'));
     }
 }
