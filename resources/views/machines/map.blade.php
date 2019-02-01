@@ -286,9 +286,11 @@
             var maxDegree = 5;
             maxDegree = markerOptions.length;
             var randomDegree = Math.floor(Math.random() * (maxDegree - minDegree) + minDegree);
-            // addMarker(machines[k].lat, machines[k].lng);
+            // For "boring" markers:
+            addMarker(machines[k].lat, machines[k].lng);
             // addMarker(machines[k].lat, machines[k].lng, 0);
-            addMarker(machines[k].lat, machines[k].lng, randomDegree);
+            // For colorful bulldozer markers:
+            // addMarker(machines[k].lat, machines[k].lng, randomDegree);
 
           }
         }
