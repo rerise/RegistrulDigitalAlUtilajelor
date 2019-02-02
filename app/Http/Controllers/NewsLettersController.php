@@ -37,6 +37,8 @@ class NewsLettersController extends Controller
 
         // $request->session()->flash('alert-success', 'Mulţumim! Email-ul a fost salvate');
         // TODO: ajax;
+        flash()->success('Email adaugat cu succes!'); 
+
 
       	return redirect()->back();
         // return redirect()->back()->with('success', 'Mulţumim! Datele au fost salvate');   

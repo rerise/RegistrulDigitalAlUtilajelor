@@ -13,8 +13,10 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
         <!-- Bootstrap CDN -->
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
 
           <!-- Font awesome -->
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -120,6 +122,7 @@
    
         <header id="header" id="home">
                 <div class="container">
+
                     <div class="row align-items-center justify-content-between d-flex">
                       <div id="logo">
                         <a href="/"><img src="images/logo.png" alt="" title="" /></a>
@@ -165,9 +168,11 @@
             <section class="banner-area relative" id="home">
                 <div class="overlay overlay-bg"></div>  
                 <div class="container">
+
                     <div class="row fullscreen d-flex align-items-center justify-content-center">
                         <div class="banner-content col-lg-7 col-md-6 ">
                             <!-- <h6 class="text-white ">the Royal Essence of Journey</h6> -->
+
                             <h1 class="text-white text-uppercase">
                                 Registrul Utilajelor             
                             </h1>
@@ -318,9 +323,12 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
                         <div class="col-lg-4  col-md-6 col-sm-6">
                             <div class="single-footer-widget">
                                 <h6>Newsletter</h6>
+
                                 <div class="">
                                     <form action="/newsletter" method="post" class="form-inline">
                                         @csrf
+                        @include('flash::message')
+                                        
                                         <input class="form-control" name="email" placeholder="Introdu email-ul tau aici..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Introdu email-ul tau aici... '" required="" type="email">
 
                                         <button class="click-btn btn btn-default" type="submit"><span><i class="fa fa-envelope"></i></span></button>
@@ -364,5 +372,10 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
             <script src="js/parallax.min.js"></script>      
             <script src="js/mail-script.js"></script>   
             <script src="js/welcome.js"></script>  
+
+
+<script>
+    $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
+</script>
     </body>
 </html>
