@@ -43,4 +43,17 @@ class NewsLettersController extends Controller
       	return redirect()->back();
         // return redirect()->back()->with('success', 'Mulţumim! Datele au fost salvate');   
    }
+
+   public function storeAjax(Request $request) 
+   {
+        $request->validate([
+            'email'=>'required|email',
+        ]);
+
+        $newsletter = new Newsletter($request->except(["_method", "_token"]));
+        $newsletter->save();
+    
+        $msg = "Mail salvat cu succes. Mulţumim!";
+        return response()->json(array('msg'=> $msg), 200);
+   }
 }

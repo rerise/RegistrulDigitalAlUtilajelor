@@ -325,21 +325,25 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
                                 <h6>Newsletter</h6>
 
                                 <div class="">
-                                    <form action="/newsletter" method="post" class="form-inline">
-                                        @csrf
-                        @include('flash::message')
+                                    <!-- <form action="/newsletter" method="post" class="form-inline"> -->
+                                        <div class="form-inline">
+                                        <!-- @csrf -->
                                         
-                                        <input class="form-control" name="email" placeholder="Introdu email-ul tau aici..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Introdu email-ul tau aici... '" required="" type="email">
+                                        <input class="form-control" id="email" name="email" placeholder="Introdu email-ul tau aici..." required="" type="email">
 
-                                        <button class="click-btn btn btn-default" type="submit"><span><i class="fa fa-envelope"></i></span></button>
+                                        <button class="click-btn btn btn-default" 
+                                        type="btn" onclick="getMessage()" 
+                                        ><span><i class="fa fa-envelope"></i></span></button>
                                          
+                                         <p class="status" id="status"></p>
                                          <!--    <button class="click-btn btn btn-default"><span><i class="fa fa-envelope"></i></span></button>
                                             <div style="position: absolute; left: -5000px;">
                                                 <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
                                             </div>
  -->
                                         <div class="info"></div>
-                                    </form>
+                                    </div>
+                                    <!-- </form> -->
                                 </div>
                             </div>
                         </div>  
@@ -354,28 +358,51 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
             </footer>   
 
 
-<script src="js/vendor/jquery-2.2.4.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-            <script src="js/vendor/bootstrap.min.js"></script>          
-            <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>          
-            <script src="js/easing.min.js"></script>            
-            <script src="js/hoverIntent.js"></script>
-            <script src="js/superfish.min.js"></script> 
-            <script src="js/jquery.ajaxchimp.min.js"></script>
-            <script src="js/jquery.magnific-popup.min.js"></script> 
-            <script src="js/owl.carousel.min.js"></script>          
-            <script src="js/jquery.sticky.js"></script>
-            <script src="js/jquery.nice-select.min.js"></script>    
-            <script src="js/waypoints.min.js"></script>
-            <script src="js/jquery.counterup.min.js"></script>                  
-            <script src="js/parallax.min.js"></script>      
-            <script src="js/mail-script.js"></script>   
-            <script src="js/welcome.js"></script>  
+        <script src="js/vendor/jquery-2.2.4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>          
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>          
+        <script src="js/easing.min.js"></script>            
+        <script src="js/hoverIntent.js"></script>
+        <script src="js/superfish.min.js"></script> 
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script> 
+        <script src="js/owl.carousel.min.js"></script>          
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/jquery.nice-select.min.js"></script>    
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>                  
+        <script src="js/parallax.min.js"></script>      
+        <script src="js/mail-script.js"></script>   
+        <script src="js/welcome.js"></script>  
 
 
-<script>
-    $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
-</script>
+        <script>
+            $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
+        </script>
+
+        <script>
+            function getMessage() {
+                $.ajax({
+                   type:'POST',
+                   url:'/newsletter-ajax',
+                   data: {
+                    email:  jQuery('#email').val(),
+                    '_token': '<?php echo csrf_token() ?>'
+                    },
+                   success:function(data) {
+                        console.log(data.msg)
+                      $("#status").html(data.msg);
+                   },
+                   // TODO: make error message come from controller and validation
+                   error:function(data) {
+                        console.log(data.msg)
+                      $("#status").html('<span style=color:red>' + 'Format greşit sau eroare de server' + '</p>');
+                   }
+                });
+            }
+        </script>
+
     </body>
 </html>

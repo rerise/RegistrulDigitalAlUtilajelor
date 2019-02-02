@@ -67,3 +67,4 @@ Route::post("/message-change-status/{messageId}", "MessagesController@changeRead
 
 Route::post('/contacts', 'ContactsController@store')->name('contacts.store');
 Route::post('/newsletter', 'NewsLettersController@store')->name('newsletters.store');
+Route::post('/newsletter-ajax', 'NewsLettersController@storeAjax')->name('newsletters.store-ajax');
