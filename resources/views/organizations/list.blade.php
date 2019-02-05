@@ -22,30 +22,42 @@
 @endsection
 
 @section('content')
-                <div>
-                    <table class="table table-bordered simple-data-table">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th>
-                                    Nume
-                                </th>
-                                <th>
-                                    Detalii
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($organizations as $organization)
-                                <tr>
-                                    <td>{{ $organization->name }}</td>
-                                    <td>{{ $organization->details }}</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+    <div>
+        <table class="table table-bordered simple-data-table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>
+                        Nume
+                    </th>
+                    <th>
+                        Detalii
+                    </th>
+                    <th>
+                        Acţiuni
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($organizations as $organization)
+                    <tr>
+                        <td>{{ $organization->name }}</td>
+                        <td>{{ $organization->details }}</td>
+                        <td>
+                            <form action="/organizations/{{$organization->id}}" method="POST">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+                                <button class="btn btn-danger" value="submit" type="submit">
+                                    <i class="fa fa-trash"></i>
+                                Şterge</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
 
-                    <a href="{{route('organizations.create')}}" class="btn btn-warning">
-                       + Adaugă organizaţie
-                    </a>
-                </div>
+        <a href="{{route('organizations.create')}}" class="btn btn-warning">
+           + Adaugă organizaţie
+        </a>
+    </div>
 @endsection

@@ -51,6 +51,7 @@
                 <label for="type">Tip:</label>
                 <input type="text" class="form-control" name="type" placeholder="Tip utilaj" />
               </div>
+              
               <!-- <div class="form-group"> -->
 
                 <label for="location_details">Cauta locaţie:</label>

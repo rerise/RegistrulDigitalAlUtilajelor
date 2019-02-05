@@ -207,9 +207,15 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
     @endforeach
     
                         <h4 class="text-white pb-30">
-                            Lasă-ne detaliile tale de contact aici/
+                            <i class="fa fa-user"></i>
+                            Lasă-ne detaliile tale de contact aici
                             <br>
+                            <br>
+                            <i class="fa fa-building"></i>
                             Înregistrează-ţi firma/organizaţia
+                            <br>
+                            <!-- <br> -->
+                               
                         </h4>
                             <!-- <form class="form" role="form" autocomplete="off"> -->
 
@@ -220,7 +226,7 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
               <div class="form-group">
                   <label for="name">Nume:</label>
                   <input type="text" class="form-control" name="name" 
-                  placeholder="Nume" />
+                  placeholder="Nume" value="{{old('name', '')}}"/>
               </div>
 
 
@@ -236,11 +242,13 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
               </div> -->
 
               <hr>
-                            <h4 class="text-white pb-30">
-                                <i class="fa fa-envelope"></i>&nbsp;
-                            Lasă-ne un mesaj</h4>
 
+                <h4 class="text-white pb-30">
+               <i class="fa fa-envelope"></i>&nbsp;
+                            Lasă-ne un mesaj</h4>
+                           
                <div class="form-group">
+                    <!-- <label for="message">Mesaj:</label> -->
                   <textarea name="message" class="form-control"
                   placeholder="Mesaj pentru noi (opţional)"></textarea>
               </div>
@@ -379,7 +387,7 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
 
 
         <script>
-            $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
+            // $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
         </script>
 
         <script>

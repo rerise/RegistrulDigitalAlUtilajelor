@@ -89,6 +89,8 @@ class OrganizationsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $organization = Organization::find($id);
+        $organization->delete();
+        return redirect('/organizations')->with('success', 'Organization has been deleted');
     }
 }

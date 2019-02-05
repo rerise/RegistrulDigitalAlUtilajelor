@@ -61,7 +61,11 @@
                         </a>
                         <a href="/newsletters"> <i class="menu-icon fa fa-address-book"></i>Newsletter
                         </a>
+
+                        <a href="{{route('organizations.index')}}"> <i class="menu-icon fa fa-tasks"></i>Organizaţii
+                        </a>
                     </li>
+
                     <h3 class="menu-title">Administrare</h3><!-- /.menu-title -->
                     <!-- <li>
                         <a href="{{route('machines.index')}}"> <i class="menu-icon ti-list"></i>Lista utilaje</a>
@@ -96,6 +100,7 @@
                            </li>
                        </ul>
                     </li>
+
 
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Depozite</a>

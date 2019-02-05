@@ -63,13 +63,12 @@
                     <td>{{ $machine->type }}</td>
                     <td>
                         <form action="/machines/{{$machine->id}}" method="POST">
-                        {{ csrf_field() }}
-                        {{ method_field('DELETE') }}
-                        <button class="btn btn-danger" value="submit" type="submit">
-                            <i class="fa fa-trash"></i>
-                        Şterge</button>
-                    </form>
-
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+                            <button class="btn btn-danger" value="submit" type="submit">
+                                <i class="fa fa-trash"></i>
+                            Şterge</button>
+                        </form>
                     </td>
                 </tr>
             @endforeach
