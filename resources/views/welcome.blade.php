@@ -208,13 +208,13 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
     
                         <h4 class="text-white pb-30">
                             <i class="fa fa-user"></i>
-                            Lasă-ne detaliile tale de contact aici
+                            Lasă-ne datele tale de contact aici
                             <br>
                             <br>
-                            <i class="fa fa-building"></i>
+                            <!-- <i class="fa fa-building"></i>
                             Înregistrează-ţi firma/organizaţia
                             <br>
-                            <!-- <br> -->
+                             --><!-- <br> -->
                                
                         </h4>
                             <!-- <form class="form" role="form" autocomplete="off"> -->
@@ -230,25 +230,39 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
               </div>
 
 
-              <div class="form-group">
+              <!-- <div class="form-group">
                   <label for="contact_details">Detalii de contact: </label>
                   <textarea name="contact_details" class="form-control"
                   placeholder="Detalii de contact"></textarea>
+              </div> -->
+              
+              <div class="form-group">
+                  <label for="tel">Telefon: </label>
+                  <input name="tel" class="form-control" type="number"
+                  placeholder="Telefon">
               </div>
+
+
+              <div class="form-group">
+                  <label for="email">Email: </label>
+                  <input name="email" class="form-control" type="text"
+                  placeholder="Email">
+              </div>
+
 
              <!--  <div class="form-group">
                   <label for="trade_register">Nr. registrul comerţului:</label>
                   <input type="text" class="form-control" name="trade_register" placeholder="Nr. registrul comerţului" />
               </div> -->
 
-              <hr>
+              <!-- <hr> -->
 
-                <h4 class="text-white pb-30">
+               <!--  <h4 class="text-white pb-30">
                <i class="fa fa-envelope"></i>&nbsp;
-                            Lasă-ne un mesaj</h4>
+                            Lasă-ne un mesaj</h4> -->
                            
                <div class="form-group">
-                    <!-- <label for="message">Mesaj:</label> -->
+                    <label for="message">Mesaj:</label>
                   <textarea name="message" class="form-control"
                   placeholder="Mesaj pentru noi (opţional)"></textarea>
               </div>

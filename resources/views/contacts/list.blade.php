@@ -30,8 +30,14 @@
                                 <th>
                                     Nume
                                 </th>
-                                <th>
+                                <!-- <th>
                                     Detalii de contact
+                                </th> -->
+                                <th>
+                                    Telefon
+                                </th>
+                                <th>
+                                    Email
                                 </th>
                             </tr>
                         </thead>
@@ -39,7 +45,9 @@
                             @foreach($contacts as $contact)
                                 <tr>
                                     <td>{{ $contact->name }}</td>
-                                    <td>{{ $contact->contact_details }}</td>
+                                    <!-- <td>{{ $contact->contact_details }}</td> -->
+                                    <td>{{ $contact->tel }}</td>
+                                    <td>{{ $contact->email }}</td>
                                 </tr>
                             @endforeach
                         </tbody>

@@ -40,7 +40,9 @@ class ContactsController extends Controller
         //
         $request->validate([
             'name'=>'required',
-            'contact_details'=>'required',
+            // 'contact_details'=>'required',
+            'tel'=>'required',
+            'email'=>'required',
         ]);
 
         $contact = new Contact($request->except(["_method", "_token"]));
