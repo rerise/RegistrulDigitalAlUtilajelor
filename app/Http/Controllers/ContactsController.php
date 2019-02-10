@@ -39,11 +39,13 @@ class ContactsController extends Controller
     {
         //
         $request->validate([
-            'name'=>'required',
+            'name'=>'required|min:3',
             // 'contact_details'=>'required',
-            'tel'=>'required',
-            'email'=>'required',
+            'tel'=>'required|numeric',
+            'email'=>'required|email',
+            'captcha' => 'required|captcha',
         ]);
+            
 
         $contact = new Contact($request->except(["_method", "_token"]));
         $contact->save();

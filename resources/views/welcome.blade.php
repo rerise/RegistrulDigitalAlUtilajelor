@@ -206,11 +206,9 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
       @endif
     @endforeach
     
-                        <h4 class="text-white pb-30">
+                        <h4 class="text-white pb-1">
                             <i class="fa fa-user"></i>
                             Lasă-ne datele tale de contact aici
-                            <br>
-                            <br>
                             <!-- <i class="fa fa-building"></i>
                             Înregistrează-ţi firma/organizaţia
                             <br>
@@ -267,10 +265,16 @@ Conform legilor în vigoare din România, în momentul declarării stării de ne
                   placeholder="Mesaj pentru noi (opţional)"></textarea>
               </div>
 
+              <div class="form-group">
+                <!-- Captcha: -->
+                {!! captcha_img()  !!} 
+                <input type="text" name="captcha" class="form-control">
+              </div>
+
                       
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <button type="submit" class="btn btn-default btn-lg btn-block text-center text-uppercase">Înregistrează</button>
+                                        <button type="submit" class="btn btn-default btn-lg btn-block text-center text-uppercase">Salvează</button>
                                     </div>
                                 </div>
 

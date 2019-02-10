@@ -38,7 +38,7 @@ class MachinesController extends Controller
     {
         // TODO add validation + Request file
         $request->validate([
-            'name'=>'required',
+            'name' => 'required|min:3',
         ]);
         $machine = new Machine($request->except(["_method", "_token"]));
         $machine->save();
